@@ -1,0 +1,21 @@
+group 'com.sic.org.spring.repository'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+ext {
+    springdataCommons = "1.1.0.RELEASE"
+    springContext = "4.2.5.RELEASE"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework.data:spring-data-commons-core:$springdataCommons"
+    compile "org.springframework:spring-context:$springContext"
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
